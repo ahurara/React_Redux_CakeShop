@@ -1,9 +1,10 @@
 import { BUY_ICE_CREAM , RETURN_ICE_CREAM} from "./iceCreamType"
 
-
-function buyIceCream(){
+//by default it will minus the 1 fron ice cream if no value is given    
+function buyIceCream(number = 1){
     return {
-        type : BUY_ICE_CREAM
+        type : BUY_ICE_CREAM,
+        payload: number
     }
 }
 
