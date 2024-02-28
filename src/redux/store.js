@@ -1,4 +1,6 @@
 import { createStore , applyMiddleware } from "redux";
+// to make async action creators
+import { thunk } from "redux-thunk";
 //if multiple reducers
 import rootReducer from "./rootReducer";
 //if one reducer
@@ -7,6 +9,6 @@ import rootReducer from "./rootReducer";
 import logger from "redux-logger";
 
 
-const store = createStore(rootReducer , applyMiddleware(logger))
+const store = createStore(rootReducer , applyMiddleware(logger , thunk))
 
 export default store;
